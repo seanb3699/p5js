@@ -7,18 +7,45 @@
     
     <script>
         function setup() {
-            createCanvas(800,600);
+            createCanvas(500,800);
+            strokeWeight(4);
+            
+            //Legs/Circles
+            fill('purple')
+            ellipse(320,450,50,50)
+            ellipse(425,450,50,50)
+            
+            //The body
+            fill('skyblue')
+            rect(300,150,150,275)
+            
+            //Square eyes part
+            fill('lightgreen')
+            rect(320,175,25,25)
+            fill(204, 252, 244)
+            rect(400,175,25,25)
+            
+            //The text
+            textSize(20);
+            text("Hello World!", 320,375);
+            fill('orange');
+            
+            //hands
+            line(200,300,300,300)
+            line(440,300,560,300)
+            
+            //The eyes
+            ellipse(412,189,20,20)
+            ellipse(332,189,20,20)
+            
+            //The Mouth
+            stroke('yellow');
+            strokeWeight(4);
+            rect(325,275,100,20)
+
         }
 
         function draw() {
-        ellipse(250,140,100,100);
-        ellipse(210,140,27,27);
-        ellipse(290,140,27,27);
-        ellipse(250,185,8,2);
-        ellipse(207,190,90,150);
-      /*  line(220,380,220,340);
-        line(280,380,280,340);*/
-
         }
     </script>
 </head>
