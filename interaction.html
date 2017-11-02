@@ -11,23 +11,24 @@
         
         }
         function keyPressed(){
+            //Background changes
             fill(random(255),random(255),random(255));
          background(random(200),random(100),random(300))
         }
        function draw() {
         }
         function mouseMoved(){
-            
+            //lines solo
             line(width-800,height-600,mouseX,mouseY)
             line(width,height-600,mouseX,mouseY)
-            //ellipse(mouseX,mouseY,300,300)
-            //line()
         }
         function  mouseDragged(){
+            //Lines with Circle
             line(width-800,height-600,mouseX,mouseY)
             line(width,height-600,mouseX,mouseY)
             fill('orange')
             ellipse(mouseX,mouseY,300,300)
+         //   rect(mouseX,mouseY,300,300)
             //line()
         }
      /*   function mouseMoved(){
