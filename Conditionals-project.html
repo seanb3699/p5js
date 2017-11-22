@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>p5js Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.3/p5.js"></script>
+
+    <script>
+    
+        var squarePressed; //knows if squares is being pressed
+        function setup() {
+            createCanvas(500, 500);
+            background(250);
+            //squarePress = 0;
+        }
+
+        function draw() {
+            noStroke();//no outline 
+            
+            //red square
+            fill(255, 0, 0);
+            rect(50, 400, 50, 50);
+
+            //black square
+            fill(0)
+            rect(150, 400, 50, 50);
+
+            //blue square
+            fill(0, 0, 255);
+            rect(250, 400, 50, 50);
+
+            //white square
+            fill(250);
+            stroke(0);//black ouutline 
+            rect(350, 400, 50, 50);
+
+        }
+
+        function mousePressed() {
+            // red square being pressed
+            if (mouseX > 50 && mouseY > 400 && mouseX < 100 && mouseY < 450) {
+                squarePressed = 1;
+            }
+            
+            // green square being pressed
+            else if (mouseX > 150 && mouseY > 400 && mouseX < 200 && mouseY < 450) {
+                squarePressed = 2;
+            }
+            
+            // blue square being pressed
+            else if (mouseX > 250 && mouseY > 400 && mouseX < 300 && mouseY < 450) {
+                squarePressed = 3;
+            }
+            
+            //clear the background if pressed
+            else if (mouseX > 350 && mouseY > 400 && mouseX < 400 && mouseY < 450) {
+                squarePressed = 4;
+                background(250);
+            }
+        }
+
+        function mouseDragged() {
+            //change the circles to red
+            if (squarePressed == 1) {
+                fill(255, 0, 0);
+                noStroke();
+                ellipse(mouseX, mouseY, 20, 20);
+            }
+            
+            //change the circles to green
+            if (squarePressed == 2) {
+               // fill(0, 255, 0);
+                fill(0);
+                noStroke();
+                ellipse(mouseX, mouseY, 20, 20);
+            }
+            
+            //change the circles to blue
+            if (squarePressed == 3) {
+                fill(0, 0, 255);
+                noStroke();
+                ellipse(mouseX, mouseY, 20, 20);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="code" class="container-fluid">
+        <script src="https://gist-it.appspot.com/github/seanb3699/p5js/blob/gh-pages/Conditionals-project.html?footer=0"></script>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(window).bind("load", function() {
+            $('#code').before($('#defaultCanvas0').remove());
+        });
+    </script>
+</body>
+
+</html>
